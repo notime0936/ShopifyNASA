@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    title BlueSpace
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(charset="utf-8")
+    link(rel='stylesheet', href='/stylesheets/nasa.css')
+    link(rel="stylesheet" href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    script(type='text/javascript' src='/javascripts/nasa.js')
+  body
+    block content
+// Header
+.header 
+  h1 Welcome to BlueSpace
+  
+// Navigation Bar
+.navbar
+  button(class='dropbtn') 
+    i.material-icons menu
+  .navdrop
+    a(href='#') Home
+    a(href='#') News
+    a(href='#') About
+    a(href='#') Contact
+  
+// The flexible grid (content)
+.row
+  .side
+    h2 About Me
+    img(id='picme',src='/images/me.jpg')
+    p Hi, I am an undergrade majoring in computer science at the University of Texas at Arlington. This is my project for the Shopify Front End Developer Intern Challenge - Summer 2022
+    h3 Website function
+    ul
+      li Fetch data from NASA’s Picture of the Day API and display the resulting images
+      li Save likes if the user leaves or reloads the page
+      li Add a loading state while we wait for NASA’s API to return data
+      li Add a date-picker to be able to browse photos starting from a specific date
+      li Responsive
+  .main
+    form#formDatePicker
+      label(for='startDate') Start date:
+      input#datePicker(type='date' name='date')
+      input#submitButton(type='submit')
+    #contentContainer
+    img(src='/images/loading.gif', id='imgloading')
+    #error
+// Footer
+.footer

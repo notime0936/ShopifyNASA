@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #7649fe;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  background-color: #1d1135;
+}
+
+
+.navdrop a{
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #7649fe;
+  color: white;
+}
+
+.dropbtn{
+  padding: 14px 20px;
+  display: none;
+  background-color: #1d1135;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.picme {
+  width: 50%;
+  height: auto;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+iframe{
+  width: 100%;
+  height: auto;
+}
+
+.likebtn{
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 30px;
+}
+
+.likebtn:hover{
+  cursor: pointer;
+}
+
+#datePicker {
+  margin-left: 20px;
+  padding: 5px;
+}
+#submitButton {
+  margin-left: 20px;
+  padding: 10px;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  background-color: #7649fe;
+}
+#submitButton:hover{
+  cursor: pointer;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 700px) {
+  .row{
+    display: inline-block;
+  } 
+
+  /* Menu */
+  .navbar{
+    position: relative;
+    display: inline-block;
+  }
+  .dropbtn {
+    display: inline-block;
+    position: relative;
+  }
+  .navdrop {   
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #7649fe;
+  }
+  
+  .navbar:hover .navdrop {
+    background-color: #7649fe;
+    display: block;
+  }
+  
+}
