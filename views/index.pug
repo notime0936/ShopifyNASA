@@ -28,7 +28,7 @@ html
   .side
     h2 About Me
     img(id='picme',src='/images/me.jpg')
-    p Hi, I am an undergrade majoring in computer science at the University of Texas at Arlington. This is my project for the Shopify Front End Developer Intern Challenge - Summer 2022
+    p Hi, I am an undergraduate majoring in computer science at the University of Texas at Arlington. This is my project for the Shopify Front End Developer Intern Challenge - Summer 2022
     h3 Website function
     ul
       li Fetch data from NASA’s Picture of the Day API and display the resulting images
@@ -36,11 +36,12 @@ html
       li Add a loading state while we wait for NASA’s API to return data
       li Add a date-picker to be able to browse photos starting from a specific date
       li Responsive
+      li Code link: https://github.com/notime0936/ShopifyNASA
   .main
     form#formDatePicker
       label(for='startDate') Start date:
       input#datePicker(type='date' name='date')
-      input#submitButton(type='submit')
+      input#submitButton(type='submit' value="Get Images")
     #contentContainer
     img(src='/images/loading.gif', id='imgloading')
     #error

@@ -28,6 +28,8 @@ function getImg(fromDate) {
   btnId = 0;
   picLike = new Map();
   document.getElementById('contentContainer').innerHTML='';
+  document.getElementById('imgloading').style.display = 'block';
+  
   if(typeof fromDate !== 'undefined'){
     queryUrl=queryUrl+'&start_date='+fromDate;
   }
